@@ -11,6 +11,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css">
 
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -205,12 +206,260 @@
                     <h2 class="text-[2.125rem] font-h3Bold leading-6 antialiased">Ask me how I've
                     </h2>
                 </div>
-            </section><!-- end of clients -->
-            <section id="contact" class="h-screen pt-20">
-                <div class="container">
-                    <h1>contact</h1>
+
+                <div class="b-slider marquee-slider my-40 gap-x-30 overflow-x-hidden ">
+                    <div class="b-slider__slide w-[55rem]">
+                        <a href="#" class="b-slider__ref cursor-grab text-primaryColor text-[3.375rem] leading-[3.875rem] font-h1Bold">
+                            <h1>Helped South Africa’s largest retail destination transform their omni-channel data-first digital strategy.</h1>
+                        </a>
+                    </div>
+                    <div class="b-slider__slide w-[55rem]">
+                        <a href="" class="b-slider__ref cursor-grab text-primaryColor text-[3.375rem] leading-[3.875rem] font-h1Bold">
+                           <h1>Helped a global animal NPO save a 4M+ donor-base from cybercrime disaster.</h1> 
+                        </a>
+                    </div>
+                    <div class="b-slider__slide w-[55rem]">
+                        <a href="" class="b-slider__ref cursor-grab text-primaryColor text-[3.375rem] leading-[3.875rem] font-h1Bold">
+                            <h1>Helped a global Healthtech enterprise conceive & build a big-data AI product before AI was big.</h1>
+                        </a>
+                    </div>
+                    <div class="b-slider__slide w-[55rem]">
+                        <a href="" class="b-slider__ref cursor-grab text-primaryColor text-[3.375rem] leading-[3.875rem] font-h1Bold">
+                            <h1>Helped Mazda Japan redefine & deploy the next generation of electric vehicle tech infrastructure.</h1>
+                        </a>
+                    </div>
+                    <div class="b-slider__slide w-[55rem]">
+                        <a href="" class="b-slider__ref cursor-grab text-primaryColor text-[3.375rem] leading-[3.875rem] font-h1Bold">
+                            <h1>Helped Panasonic solve e-bike logistic and supply chain woes with smart sensor technology.</h1>
+                        </a>
+                    </div>
+                    <div class="b-slider__slide w-[55rem]">
+                        <a href="" class="b-slider__ref cursor-grab text-primaryColor text-[3.375rem] leading-[3.875rem] font-h1Bold">
+                            <h1>Built and sold IoT tech to Cape Towns largest convention centre.</h1>
+                        </a>
+                    </div>
+                    <div class="b-slider__slide w-[55rem]">
+                        <a href="" class="b-slider__ref cursor-grab text-primaryColor text-[3.375rem] leading-[3.875rem] font-h1Bold">
+                            <h1>Built & scaled South Africa’s largest food-relief platform alongside government.</h1>
+                        </a>
+                    </div>
+                </div><!-- end of marquee-slider -->
+              
+                <div class="b-slider mt-4 brands-box brands-marquee gap-x-20 text-10vh overflow-x-hidden">
+                    <div class="b-slider__slide w-[65rem]">
+                        <p class="leading-[1em]">⚬ other brands</p>
+                    </div>
+                    <div class="b-slider__slide w-[65rem]">
+                        <p class="leading-[1em]">⚬ other brands</p>
+                    </div>
+                    <div class="b-slider__slide w-[65rem]">
+                        <p class="leading-[1em]">⚬ other brands</p>
+                    </div>
+                    <div class="b-slider__slide w-[65rem]">
+                        <p class="leading-[1em]">⚬ other brands</p>
+                    </div>
+                    <div class="b-slider__slide w-[65rem]">
+                        <p class="leading-[1em]">⚬ other brands</p>
+                    </div>
+                    <div class="b-slider__slide w-[65rem]">
+                        <p class="leading-[1em]">⚬ other brands</p>
+                    </div>
+                    <div class="b-slider__slide w-[65rem]">
+                        <p class="leading-[1em]">⚬ other brands</p>
+                    </div>
                 </div>
+
+                <div class="solution-wrapper bg-primaryColor text-white">
+                    <div class="b-slider solution-marquee gap-x-20 text-10vh overflow-x-hidden">
+                        <div class="b-slider__slide w-[55rem]">
+                            <p class="leading-[1em] lowercase">⚬ i've helped</p>
+                        </div>
+                        <div class="b-slider__slide w-[55rem]">
+                            <p class="leading-[1em] lowercase">⚬ i've helped</p>
+                        </div>
+                        <div class="b-slider__slide w-[55rem]">
+                            <p class="leading-[1em] lowercase">⚬ i've helped</p>
+                        </div>
+                        <div class="b-slider__slide w-[55rem]">
+                            <p class="leading-[1em] lowercase">⚬ i've helped</p>
+                        </div>
+                        <div class="b-slider__slide w-[55rem]">
+                            <p class="leading-[1em] lowercase">⚬ i've helped</p>
+                        </div>
+                        <div class="b-slider__slide w-[55rem]">
+                            <p class="leading-[1em] lowercase">⚬ i've helped</p>
+                        </div>
+                        <div class="b-slider__slide w-[55rem]">
+                            <p class="leading-[1em] lowercase">⚬ i've helped</p>
+                        </div>
+                    </div><!-- endo f solution-marquee -->
+
+                    <div class="client-box mx-[16rem] my-10 py-40">
+                        <div class="client-inner grid grid-cols-4 gap-10">
+                            <div class="client-img w-[20.887rem]">
+                                <img src="{{asset('images/ninetyone.png')}}" class="object-contain" alt="ninetyone" />
+                            </div>
+                            <div class="client-img w-[20.887rem]">
+                                <img src="{{asset('images/vawaterfront.png')}}" class="object-contain" alt="vawaterfront" />
+                            </div>
+                            <div class="client-img w-[20.887rem]">
+                                <img src="{{asset('images/mazda.png')}}" class="object-contain" alt="mazda">
+                            </div>
+                            <div class="client-img w-[20.887rem]">
+                                <img src="{{asset('images/cticc.png')}}" class="object-contain" alt="cticc">
+                            </div>
+                            <div class="client-img w-[20.887rem]">
+                                <img src="{{asset('images/tfg.png')}}" class="object-contain" alt="tfg">
+                            </div>
+                            <div class="client-img w-[20.887rem]">
+                                <img src="{{asset('images/discoveryvitality.png')}}" class="object-contain" alt="discoveryvitality">
+                            </div>
+                            <div class="client-img w-[20.887rem]">
+                                <img src="{{asset('images/adidas.png')}}" class="object-contain" alt="adidas">
+                            </div>
+                            <div class="client-img w-[20.887rem]">
+                                <img src="{{asset('images/basecamp.png')}}" class="object-contain" alt="basecamp">
+                            </div>
+                            <div class="client-img w-[20.887rem]">
+                                <img src="{{asset('images/nhs.png')}}" class="object-contain" alt="nhs">
+                            </div>
+                            <div class="client-img w-[20.887rem]">
+                                <img src="{{asset('images/woolworths.png')}}" class="object-contain" alt="woolworths">
+                            </div>
+                            <div class="client-img w-[20.887rem]">
+                                <img src="{{asset('images/virginactive.png')}}" class="object-contain" alt="virginactive">
+                            </div>
+                            <div class="client-img w-[20.887rem]">
+                                <img src="{{asset('images/vodacom.png')}}" class="object-contain" alt="vodacom">
+                            </div>
+                        </div><!-- end of client-inner -->
+                    </div><!-- end of client-box -->
+                </div><!-- endo fsolution-wrapper -->
+
+            </section><!-- end of clients -->
+            <section id="contact" class="h-screen pt-10">
+                <div class="b-slider contact-marquee text-18vh gap-x-20 overflow-x-hidden">
+                    <div class="b-slider__slide w-[190rem]">
+                        <h2 class="leading-[1.5em] text-stroke">less reading more doing.</h2>
+                    </div>
+                    <div class="b-slider__slide w-[190rem]">
+                        <h2 class="leading-[1.5em] text-stroke">less reading more doing.</h2>
+                    </div>
+                    <div class="b-slider__slide w-[190rem]">
+                        <h2 class="leading-[1.5em] text-stroke">less reading more doing.</h2>
+                    </div>
+                </div>
+
+                <div class="contact-address mx-[16rem] lowercase mb-[-4rem]">
+                    <h2 class="lowercase leading-loose text-[2.125rem] font-logoBold mt-4">let’s take action.</h2>
+                    <div class="contact-box text-14vh font-h1Bold leading-[15.4vh]">
+                        <h1 class="mb-36">just say hi</h1>
+                        <h1 class="mb-36">concept development</h1>
+                        <h1 class="mb-36">product audit</h1>
+                        <h1 class="mb-36">art of the mvp</h1>
+                        <h1 class="mb-36">fractional cpo</h1>
+                        <h1 class="mb-36">team jetfuel</h1>
+                        <h1 class="mb-36 text-[10vh] leading-[11vh]"><i class="fa-brands text-[3.75rem] leading-[3.75rem] text-primaryColor fa-linkedin mr-4"></i><a href="">connect linkedin</a></h1>
+                    </div><!-- end ofcontact-box -->
+                </div><!-- end of contact-address -->
             </section><!-- end of contact -->
        </div><!-- endo fo main-wrapper -->
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
+       <script>
+
+            
+            let marqueeSlider = document.querySelector('.marquee-slider');
+            let brandsMarquee = document.querySelector('.brands-marquee');
+            let solutionMarquee = document.querySelector('.solution-marquee');
+            let contactMarquee = document.querySelector('.contact-marquee');
+            let marqueeSlide = document.querySelector('.b-slider__ref');
+            let mainTicker = new Flickity('.marquee-slider', {
+                accessibility: true,
+                resize: true,
+                wrapAround: true,
+                prevNextButtons: false,
+                pageDots: false,
+                percentPosition: true,
+                setGallerySize: true,
+            });
+
+            let mainTicker2 = new Flickity('.brands-marquee', {
+                accessibility: true,
+                resize: true,
+                wrapAround: true,
+                prevNextButtons: false,
+                pageDots: false,
+                percentPosition: true,
+                setGallerySize: true,
+            });
+
+            let mainTicker3 = new Flickity('.solution-marquee', {
+                accessibility: true,
+                resize: true,
+                wrapAround: true,
+                prevNextButtons: false,
+                pageDots: false,
+                percentPosition: true,
+                setGallerySize: true,
+            });
+
+            let mainTicker4 = new Flickity('.contact-marquee', {
+                accessibility: true,
+                resize: true,
+                wrapAround: true,
+                prevNextButtons: false,
+                pageDots: false,
+                percentPosition: true,
+                setGallerySize: true,
+            });
+
+            // Set initial position to be 0
+            mainTicker.x = 0;
+            mainTicker2.x = 0;
+            mainTicker3.x = 0;
+            mainTicker4.x = 0;
+
+            let scrollSpeed = 0.8; 
+
+            // Start the marquee animation
+            play();
+
+            // Main function that 'plays' the marquee.
+            function play() {
+            // Set the decrement of position x
+            mainTicker.x -= 1.5;
+            mainTicker2.x -= 1.5;
+            mainTicker3.x += 1.5;
+            mainTicker4.x -= 1.5;
+
+            // Settle position into the slider
+            mainTicker.settle(mainTicker.x);
+            mainTicker2.settle(mainTicker2.x);
+            mainTicker3.settle(mainTicker3.x);
+            mainTicker4.settle(mainTicker4.x);
+
+            // Set the requestId to the local variable
+            requestId = window.requestAnimationFrame(play);
+            }
+
+            // Main function to cancel the animation.
+            function pause() {
+            if(requestId) {
+                // Cancel the animation
+                window.cancelAnimationFrame(requestId)
+
+                // Reset the requestId for the next animation.
+                requestId = undefined;
+            }
+            }
+
+            // Pause on hover/focus
+            // marqueeSlider.addEventListener('mouseenter', () => pause());
+
+            // Unpause on mouse out / defocus
+            // marqueeSlider.addEventListener('mouseleave', () => play());
+
+       </script>
     </body>
 </html>

@@ -28,11 +28,16 @@ export default {
                 '3vh':'3vh',
                 '2vh':'2vh',
                 '4vh':'4vh',
-                '16vh':'16vh'
+                '16vh':'16vh',
+                '10vh':'10vh',
+                '18vh':'18vh',
+                '14vh':'14vh',
+                '15.4vh':'15.4vh'
             },
             fontWeight:{
                 logoBold:'600',
-                h3Bold:'500'
+                h3Bold:'500',
+                h1Bold:'800'
             },
         },
     },
