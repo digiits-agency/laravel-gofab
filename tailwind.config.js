@@ -16,7 +16,8 @@ export default {
                 bgColor:'##f0f0f0',
                 bgColor:'#f0f0f0',
                 listColor:'#8e8e8e',
-                listBorderColor:'#dbdbdb'
+                listBorderColor:'#dbdbdb',
+                footerBg:'#252525'
             },
             fontFamily: {
                 poppins: ['Poppins', 'sans-serif'],

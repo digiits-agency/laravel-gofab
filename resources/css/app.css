@@ -13,5 +13,16 @@
       -webkit-text-stroke-color: white;
       color: transparent;
     }
+    .active {
+      border-bottom-width: 2px; /* Adds the border-bottom */
+      @apply border-primaryColor
+    }
+    .sidebar-active{
+      color: #000;
+    }
+    .header-active {
+      color: #fff; /* Example color, you can change to any color */
+    }
+  
   }
   

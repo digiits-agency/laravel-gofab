@@ -24,32 +24,45 @@
     </head>
     <body class="font-poppins antialiased bg-bgColor dark:text-gray/50">
         <div class="banner-mg relative">
-            <img src="{{'images/Fabio-alpha.svg'}}" alt="" class="w-[860px] absolute -top-16 right-[10%]">
+            <img src="{{'images/Fabio-alpha.svg'}}" alt="" class="my-banner w-[860px] absolute -top-16 right-[10%]">
         </div>
        <div id="main-wrapper" class="relative">
      
-            <header class="flex sticky z-50 text-primaryColor top-0 mx-20 py-14 justify-between">
+            <header class="flex header sticky z-50 text-primaryColor top-0 mx-20 py-14 justify-between">
                 <a href="#home" class="logo text-logoSize font-logoBold">gofab.io</a>
-
+          
                 <nav class="relative">
                     <ul class="flex font-light text-primarySize space-x-6">
                         <li>
-                            <a href="#about" class="relative inline-block text-primaryColor after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bg-primaryColor after:top-5 after:left-0 after:origin-bottom-left after:transition-transform after:duration-300 hover:after:scale-x-100">about
+                            <a href="#about"
+                                data-section="about"
+                                class="nav-link relative inline-block 
+                                after:content-[''] after:absolute after:w-full after:scale-x-0 
+                                after:h-[2px] after:bg-primaryColor after:top-5 after:left-0 
+                                after:origin-bottom-left after:transition-transform after:duration-300 
+                                hover:after:scale-x-100 active:after:scale-x-100 active:hover:after:scale-x-100">
+                                about
+                            </a>
+                 
+                        </li>
+                        <li>
+                            <a href="#expertise" data-section="expertise" class="nav-link relative inline-block  after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bg-primaryColor after:top-5 after:left-0 after:origin-bottom-left after:transition-transform after:duration-300 hover:after:scale-x-100">
+                                expertise
                             </a>
                         </li>
                         <li>
-                            <a href="#expertise" class="relative inline-block text-primaryColor after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bg-primaryColor after:top-5 after:left-0 after:origin-bottom-left after:transition-transform after:duration-300 hover:after:scale-x-100">expertise
+                            <a href="#clients" data-section="clients" class="nav-link relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bg-primaryColor after:top-5 after:left-0 after:origin-bottom-left after:transition-transform after:duration-300 hover:after:scale-x-100">
+                                clients
                             </a>
                         </li>
                         <li>
-                            <a href="#clients" class="relative inline-block text-primaryColor after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bg-primaryColor after:top-5 after:left-0 after:origin-bottom-left after:transition-transform after:duration-300 hover:after:scale-x-100">clients
+                            <a href="#contact" data-section="contact" class="nav-link relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bg-primaryColor after:top-5 after:left-0 after:origin-bottom-left after:transition-transform after:duration-300 hover:after:scale-x-100">
+                                contact
                             </a>
                         </li>
-                        <li>
-                            <a href="#contact" class="relative inline-block text-primaryColor after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bg-primaryColor after:top-5 after:left-0 after:origin-bottom-left after:transition-transform after:duration-300 hover:after:scale-x-100">contact
-                            </a>
+                        <li class="space-left-10">
+                            <a href=""><i class="fa-brands fa-linkedin-in text-xl"></i></a>
                         </li>
-                        <li class="space-left-10"><a href=""><i class=" fa-brands fa-linkedin-in text-xl"></i></a></li>
                     </ul>
                 </nav>
             </header><!-- end of header -->
@@ -58,7 +71,7 @@
                 <div class="grid grid-cols-3 gap-2 relative mx-[16rem] mb-10">
                     <div class="banner-head pt-40 col-span-2 relative ">
                         <h3 class="lowercase leading-loose text-logoSize font-h3Bold">a tech product exec</h3>
-                        <h1 class="text-[9.5rem] font-extrabold lowercase">
+                        <h1 class="text-[12vh] font-extrabold lowercase">
                             who knows things and gets things done
                         </h1>
                     </div><!-- end of banner-head -->
@@ -86,7 +99,7 @@
                             operations<br/>
                             data rooms</p>
                     </div><!-- end of core-value-box -->
-                    <div class="core-paragraph text-4vh relative">
+                    <div class="core-paragraph para text-4vh relative">
                         <p class="leading-[1.5em]">My name is Fabio, a tech enthusiast, business owner, mentor and consultant with 15+ years and 50+ products under my belt</p>  
                         <p class="leading-[1.5em] my-[5rem]">I've had both the pleasure and fortune of working alongside some of the smartest startups, aggressive scale-ups and biggest industry leaders alike - spanning verticals from healthtech, fintech, agritech, retail, FMCG, AI, IoT, Big Data - the list goes on.</p>
                         <p class="leading-[1.5em] my-[5rem]">Most times you can find me building products for clients at touchfoundry, or acting in a fractional capacity as advisor, CIO, CPO & CTO (all the o's) at various organisations. Other times you might find me presenting a talk or guest-judging for tech-driven businesses.</p>
@@ -98,15 +111,19 @@
                 </div>
             </section><!-- end of about -->
             <section id="expertise" class="relative pt-20">
-                <h1 class="text-center mt-10 text-16vh capitalize font-extrabold">how i help</h1>
+                <h1 class="text-center mt-10 text-16vh capitalize font-extrabold">
+                    <span class="how-1 translate-y-0">how </span>
+                    <span class="how-2 translate-y-0	">i </span>
+                    <span class="how-3 translate-y-0	">help</span>
+                </h1>
                 <div class="grid grid-cols-3 mx-[30rem] relative">
                     <div class="expertise-box sticky top-20 left-0 h-[calc(90vh)]">
                         <ul class="expertise-list  border-l-2  border-listBorderColor">
-                            <li class="pl-[2.81rem] pb-[2.81rem]"><a href="#concept" class="text-logoSize text-listColor font-h3Bold hover:text-black transition-all ease-in-out duration-300"><h3>concept development</h3></a></li>
-                            <li class="pl-[2.81rem] pb-[2.81rem]"><a href="#product" class="text-logoSize text-listColor font-h3Bold hover:text-black transition-all ease-in-out duration-300"><h3>product audit</h3></a></li>
-                            <li class="pl-[2.81rem] pb-[2.81rem]"><a href="#art" class="text-logoSize text-listColor font-h3Bold hover:text-black transition-all ease-in-out duration-300"><h3>art of the mvp</h3></a></li>
-                            <li class="pl-[2.81rem] pb-[2.81rem]"><a href="#fraction" class="text-logoSize text-listColor font-h3Bold hover:text-black transition-all ease-in-out duration-300"><h3>fractional cpo</h3></a></li>
-                            <li class="pl-[2.81rem]"><a href="#team" class="text-logoSize text-listColor font-h3Bold hover:text-black transition-all ease-in-out duration-300"><h3>team jetfuel</h3></a></li>
+                            <li class="pl-[2.81rem] pb-[2.81rem]"><a href="#concept" data-sidebar="concept" class="text-logoSize side-link text-listColor font-h3Bold hover:text-black transition-all ease-in-out duration-300"><h3>concept development</h3></a></li>
+                            <li class="pl-[2.81rem] pb-[2.81rem]"><a href="#product" data-sidebar="product" class="text-logoSize side-link text-listColor font-h3Bold hover:text-black transition-all ease-in-out duration-300"><h3>product audit</h3></a></li>
+                            <li class="pl-[2.81rem] pb-[2.81rem]"><a href="#art" data-sidebar="art" class="text-logoSize side-link text-listColor font-h3Bold hover:text-black transition-all ease-in-out duration-300"><h3>art of the mvp</h3></a></li>
+                            <li class="pl-[2.81rem] pb-[2.81rem]"><a href="#fraction" data-sidebar="fraction" class="text-logoSize side-link text-listColor font-h3Bold hover:text-black transition-all ease-in-out duration-300"><h3>fractional cpo</h3></a></li>
+                            <li class="pl-[2.81rem]"><a href="#team" data-sidebar="team" class="text-logoSize text-listColor side-link font-h3Bold hover:text-black transition-all ease-in-out duration-300"><h3>team jetfuel</h3></a></li>
                         </ul>    
                     </div><!-- end of expertise-box -->
                     <div  class="expertise-desc col-span-2 relative">
@@ -337,7 +354,7 @@
                 </div><!-- endo fsolution-wrapper -->
 
             </section><!-- end of clients -->
-            <section id="contact" class="h-screen pt-10">
+            <section id="contact" class=" pt-10">
                 <div class="b-slider contact-marquee text-18vh gap-x-20 overflow-x-hidden">
                     <div class="b-slider__slide w-[190rem]">
                         <h2 class="leading-[1.5em] text-stroke">less reading more doing.</h2>
@@ -363,11 +380,140 @@
                     </div><!-- end ofcontact-box -->
                 </div><!-- end of contact-address -->
             </section><!-- end of contact -->
+            <footer class="text-center bg-footerBg py-20 text-white">
+                <ul class="inline-block space-y-6 text-center text-[#575757]">
+                    <li class="text-center hover:text-primaryColor transition-all ease-in-out duration-300 flex justify-center items-center"><a href="">
+                            <div class="social-box hover:border-white transition-all ease-in-out duration-300  w-[50px] h-[50px] justify-center items-center flex rounded-full border-[#575757] border-2">
+                                <i class="fa-brands text-[1.25rem] fa-linkedin-in"></i>
+                            </div>
+                        </a></li>
+                    <li class="text-center flex justify-center items-center">&copy; 2024 gofab.io. hello@gofab.io</li>
+                </ul>
+            </footer><!-- end of footer -->
        </div><!-- endo fo main-wrapper -->
 
        <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
+       <script src="https://unpkg.com/scrollreveal"></script>
        <script>
 
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+    const header = document.querySelector("header");
+    const expertiseSection = document.querySelectorAll('.expertise-row');
+    const sideLinks = document.querySelectorAll('.side-link')
+
+    // Function to determine the current section and update active link
+    const updateActiveLink = () => {
+        let currentSection = "";
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                currentSection = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("data-section") === currentSection) {
+                link.classList.add("active");
+            }
+        });
+    };
+
+    const updateSideActiveLink = () => {
+        let currentSection = "";
+
+        expertiseSection.forEach((expertiseSection) => {
+            const sectionTop = expertiseSection.offsetTop;
+            const sectionHeight = expertiseSection.offsetHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                currentSection = expertiseSection.getAttribute("id");
+            }
+        });
+
+        sideLinks.forEach((link) => {
+            link.classList.remove("sidebar-active");
+            if (link.getAttribute("data-sidebar") === currentSection) {
+                link.classList.add("sidebar-active");
+            }
+        });
+    };
+
+    updateSideActiveLink();
+
+    // Run on page load
+    updateActiveLink();
+
+  
+
+    // Run on scroll
+    window.addEventListener("scroll", updateActiveLink);
+
+    // Header color logic
+    const solutionWrapper = document.querySelector(".solution-wrapper");
+
+    function isHeaderOnTopOfSolution() {
+        const headerRect = header.getBoundingClientRect();
+        const solutionWrapperRect = solutionWrapper.getBoundingClientRect();
+        return headerRect.bottom > solutionWrapperRect.top && headerRect.top < solutionWrapperRect.bottom;
+    }
+
+    function onScroll() {
+        if (isHeaderOnTopOfSolution()) {
+            header.style.color = "#fff";
+        } else {
+            header.style.color = "#f35151";
+        }
+    }
+
+    window.addEventListener("scroll", onScroll);
+    header.style.color = "#f35151";
+});
+
+
+
+            let headerSrev = ScrollReveal({
+                duration:2500,
+                distance:"60px",
+                origin:"top"
+            });
+
+            let bannerSrev = ScrollReveal({
+                duration:2500,
+                origin:"bottom"
+            });
+
+            headerSrev.reveal(".header", {delay:300});
+            bannerSrev.reveal(".my-banner", {delay:1000});
+            ScrollReveal().reveal('.how-1', {
+  origin: 'bottom', // Animation direction
+  distance: '50px', // Distance to travel during the animation
+  duration: 1000,   // Duration of the animation (in ms)
+  delay: 200,       // Delay before the animation starts
+  easing: 'ease-in-out', // Easing function
+  opacity: 0,       // Ensure opacity animates from 0
+});
+
+ScrollReveal().reveal('.how-2', {
+  origin: 'bottom',
+  distance: '50px',
+  duration: 1000,
+  delay: 400, // Add extra delay for staggering effect
+  easing: 'ease-in-out',
+  opacity: 0,
+});
+
+ScrollReveal().reveal('.how-3', {
+  origin: 'bottom',
+  distance: '50px',
+  duration: 1000,
+  delay: 600, // Further stagger the third word
+  easing: 'ease-in-out',
+  opacity: 0,
+});
             
             let marqueeSlider = document.querySelector('.marquee-slider');
             let brandsMarquee = document.querySelector('.brands-marquee');
