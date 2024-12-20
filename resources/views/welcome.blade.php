@@ -76,9 +76,18 @@
                         </h1>
                     </div><!-- end of banner-head -->
                 </div><!-- end of grid -->
-                <div class="hero-text mx-[16rem] my-[10rem]">
+
+                <div class="grid grid-cols-2 col-span-2 scroll-down mx-[16rem] text-center">
+                    <div class="mouse-d flex items-center justify-center">
+                        <a href="#proven=box" class="scroll-btn animate-mouse-down  text-center w-[1.875rem] h-[2.813rem] border-[1px] antialiased border-black rounded-full relative">
+                            <span class="absolute top-2 left-0 right-0 mx-auto w-[0.1em] h-[0.5em] bg-black animate-move-down" ></span>
+                        </a>   
+                    </div> 
+                </div><!-- end of mouse-down -->
+                <div id="proven=box" class="hero-text mx-[16rem] my-[10rem]">
                     <h3 class="text-8vh font-h3Bold">A proven tech executive who understands products and people. Helping tech-driven businesses build, scale and sell by implementing <br/> experience-based, <br/> action-oriented strategies.</h3>
                 </div><!-- end of hero-text -->
+
             </section><!-- end of home -->
             <section id="about" class=" pt-20">
                 <div class="grid grid-cols-2   mx-[16rem]">
@@ -370,13 +379,15 @@
                 <div class="contact-address mx-[16rem] lowercase mb-[-4rem]">
                     <h2 class="lowercase leading-loose text-[2.125rem] font-logoBold mt-4">let’s take action.</h2>
                     <div class="contact-box text-14vh font-h1Bold leading-[15.4vh]">
-                        <h1 class="mb-36">just say hi</h1>
-                        <h1 class="mb-36">concept development</h1>
-                        <h1 class="mb-36">product audit</h1>
-                        <h1 class="mb-36">art of the mvp</h1>
-                        <h1 class="mb-36">fractional cpo</h1>
-                        <h1 class="mb-36">team jetfuel</h1>
-                        <h1 class="mb-36 text-[10vh] leading-[11vh]"><i class="fa-brands text-[3.75rem] leading-[3.75rem] text-primaryColor fa-linkedin mr-4"></i><a href="">connect linkedin</a></h1>
+                        <ul class="footer-link">
+                            <li><a href=""><h1 class="mb-36">just say hi</h1></a></li> 
+                            <li><a href=""><h1 class="mb-36">concept development</h1></a></li>
+                            <li><a href=""><h1 class="mb-36">product audit</h1></a></li>
+                            <li><a href=""><h1 class="mb-36">art of the mvp</h1></a></li>
+                            <li><a href=""><h1 class="mb-36">fractional cpo</h1></a></li>
+                            <li><a href=""><h1 class="mb-36">team jetfuel</h1></a></li>
+                            <li><a href=""><h1 class="mb-36 text-[10vh] leading-[11vh]"><i class="fa-brands text-[3.75rem] leading-[3.75rem] text-primaryColor fa-linkedin mr-4"></i><a href="">connect linkedin</a></h1></a></li>
+                        </ul>
                     </div><!-- end ofcontact-box -->
                 </div><!-- end of contact-address -->
             </section><!-- end of contact -->
@@ -397,20 +408,20 @@
        <script>
 
 document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector("header");
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-link");
-    const header = document.querySelector("header");
-    const expertiseSection = document.querySelectorAll('.expertise-row');
-    const sideLinks = document.querySelectorAll('.side-link')
+    const expertiseSections = document.querySelectorAll(".expertise-row");
+    const sideLinks = document.querySelectorAll(".side-link");
 
-    // Function to determine the current section and update active link
+    // Function to determine the active section for the main navigation
     const updateActiveLink = () => {
         let currentSection = "";
 
         sections.forEach((section) => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
-            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
                 currentSection = section.getAttribute("id");
             }
         });
@@ -423,34 +434,37 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    const updateSideActiveLink = () => {
+    // Function to determine the active section for the sidebar
+    const updateActiveLinkOnScroll = () => {
         let currentSection = "";
 
-        expertiseSection.forEach((expertiseSection) => {
-            const sectionTop = expertiseSection.offsetTop;
-            const sectionHeight = expertiseSection.offsetHeight;
-            if (pageYOffset >= sectionTop - sectionHeight / 3) {
-                currentSection = expertiseSection.getAttribute("id");
+        expertiseSections.forEach((expertiseSections) => {
+            const sectionTop = expertiseSections.offsetTop;
+            const sectionHeight = expertiseSections.offsetHeight;
+            currentSection = expertiseSections.getAttribute("id");
+            if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+                currentSection = expertiseSections.getAttribute("id");
             }
         });
 
         sideLinks.forEach((link) => {
             link.classList.remove("sidebar-active");
+            
             if (link.getAttribute("data-sidebar") === currentSection) {
                 link.classList.add("sidebar-active");
             }
         });
     };
 
-    updateSideActiveLink();
-
-    // Run on page load
+    // Initialize the sidebar and main navigation links on page load
     updateActiveLink();
+    updateActiveLinkOnScroll();
 
-  
-
-    // Run on scroll
-    window.addEventListener("scroll", updateActiveLink);
+    // Run both functions on scroll
+    window.addEventListener("scroll", () => {
+        updateActiveLink();
+        updateActiveLinkOnScroll();
+    });
 
     // Header color logic
     const solutionWrapper = document.querySelector(".solution-wrapper");
@@ -489,31 +503,31 @@ document.addEventListener("DOMContentLoaded", () => {
             headerSrev.reveal(".header", {delay:300});
             bannerSrev.reveal(".my-banner", {delay:1000});
             ScrollReveal().reveal('.how-1', {
-  origin: 'bottom', // Animation direction
-  distance: '50px', // Distance to travel during the animation
-  duration: 1000,   // Duration of the animation (in ms)
-  delay: 200,       // Delay before the animation starts
-  easing: 'ease-in-out', // Easing function
-  opacity: 0,       // Ensure opacity animates from 0
-});
+            origin: 'bottom', // Animation direction
+            distance: '50px', // Distance to travel during the animation
+            duration: 1000,   // Duration of the animation (in ms)
+            delay: 200,       // Delay before the animation starts
+            easing: 'ease-in-out', // Easing function
+            opacity: 0,       // Ensure opacity animates from 0
+            });
 
-ScrollReveal().reveal('.how-2', {
-  origin: 'bottom',
-  distance: '50px',
-  duration: 1000,
-  delay: 400, // Add extra delay for staggering effect
-  easing: 'ease-in-out',
-  opacity: 0,
-});
+            ScrollReveal().reveal('.how-2', {
+            origin: 'bottom',
+            distance: '50px',
+            duration: 1000,
+            delay: 400, // Add extra delay for staggering effect
+            easing: 'ease-in-out',
+            opacity: 0,
+            });
 
-ScrollReveal().reveal('.how-3', {
-  origin: 'bottom',
-  distance: '50px',
-  duration: 1000,
-  delay: 600, // Further stagger the third word
-  easing: 'ease-in-out',
-  opacity: 0,
-});
+            ScrollReveal().reveal('.how-3', {
+            origin: 'bottom',
+            distance: '50px',
+            duration: 1000,
+            delay: 600, // Further stagger the third word
+            easing: 'ease-in-out',
+            opacity: 0,
+            });
             
             let marqueeSlider = document.querySelector('.marquee-slider');
             let brandsMarquee = document.querySelector('.brands-marquee');

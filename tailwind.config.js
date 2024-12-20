@@ -40,6 +40,19 @@ export default {
                 h3Bold:'500',
                 h1Bold:'800'
             },
+            keyframes: {
+                'move-down': {
+                  '80%': { opacity: '0.5' },
+                  '100%': { transform: 'translateY(1.3em)', opacity: '0' },
+                },
+                'mouse-down': {
+                  '100%': { transform: 'translateY(2.3em)' },
+                },
+              },
+              animation: {
+                'move-down': 'move-down 2s infinite',
+                'mouse-down': 'mouse-down 2s infinite',
+              },
         },
     },
     plugins: [],
